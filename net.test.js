@@ -20,7 +20,7 @@ afterEach(() => {
 
 describe("Cinema tests", () => {
   test("Booking one ticket for free seat", async () => {
-    let row = 3;
+    let row = 5;
     let seat = 2;
     await selectDateTime(page, data, movieTime);
     await orderTickets(page, row, seat);
@@ -29,7 +29,7 @@ describe("Cinema tests", () => {
   }, 55000);
 
   test("Booking several tickets for free seats", async () => {
-    let row = 7;
+    let row = 4;
     let seat1 = 4;
     let seat2 = 5;
     await selectDateTime(page, data, movieTime);
@@ -39,8 +39,8 @@ describe("Cinema tests", () => {
   }, 55000);
 
   test("Booking ticket for taken seat ", async () => {
-    let row = 2;
-    let seat = 5;
+    let row = 3;
+    let seat = 1;
     await selectDateTime(page, data, movieTime);
     await orderTickets(page, row, seat);
     await page.goto("http://qamid.tmweb.ru/client/index.php");

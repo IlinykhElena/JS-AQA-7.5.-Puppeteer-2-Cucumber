@@ -45,3 +45,4 @@ out/
 !**/src/main/**
 !**/src/test/**
 !**/artifacts/**
+node_modules

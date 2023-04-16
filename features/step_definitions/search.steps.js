@@ -41,15 +41,15 @@ When("user choose day and movie", async function () {
   );
 });
 
-When("user choose row and seat", async function () {
+When("user choose row and seat", async function (row, seat) {
   //выбор ряда и 1 места
-  return await orderTickets(this.page, 6, 5);
+  return await orderTickets(this.page, row, seat);
 });
 
-When("select row and seats", async function () {
-  //выбор ряда и нескольких мест
-  return await orderTickets(this.page, 10, 7, 8);
-});
+// When("user choose row and seats", async function () {
+//   //выбор ряда и нескольких мест
+//   return await orderTickets(this.page, 10, 7, 8);
+// });
 
 Then("ticket booking is confirmed", async function () {
   //подтверждение бронирования
