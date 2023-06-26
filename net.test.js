@@ -19,11 +19,20 @@ afterEach(() => {
 });
 
 describe("Cinema tests", () => {
+  // test("Booking one ticket for free seat", async () => {
+  //   let row = 2;
+  //   let seat = 2;
+  //   await selectDateTime(page, data, movieTime);
+  //   await orderTickets(page, row, seat);
+  //   const actual = await getText(page, ticketHint);
+  //   expect(actual).toContain(confirmingText);
+  // }, 55000);
+
   test("Booking one ticket for free seat", async () => {
     let row = 2;
     let seat = 2;
     await selectDateTime(page, data, movieTime);
-    await orderTickets(page, row, seat);
+    await chooseSeat(page, row, seat);
     const actual = await getText(page, ticketHint);
     expect(actual).toContain(confirmingText);
   }, 55000);

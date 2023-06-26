@@ -43,16 +43,16 @@ When("user choose day and movie", async function () {
   );
 });
 
-When("user choose {int} row and {int} seat", async function (row, seat) {
+When("user choose {int} row and {int} seat", async function () {
   //выбор ряда и 1 места
-  return await orderTickets(this.page, row, seat);
+  return await chooseSeat(this.page, row, ...seats);
 });
 
 When(
   "user choose {int} row and {int} seat and {int} seat",
-  async function (row, seat, seat) {
+  async function (row, ...seats) {
     //выбор ряда и нескольких мест
-    return await orderTickets(this.page, row, seat, seat);
+    return await orderTickets(this.page, row, ...seats);
   }
 );
 

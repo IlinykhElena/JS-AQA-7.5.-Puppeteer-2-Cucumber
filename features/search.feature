@@ -17,6 +17,4 @@ Feature: booking tickets
                 Given user is on page
                 When user choose day and movie
                 And user choose row and seat
-                # And user is on page
-                # When user choose day and movie
                 Then ticket booking is not possible
